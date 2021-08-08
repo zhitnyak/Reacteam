@@ -1,0 +1,243 @@
+.contacts {
+  background-color: $dark-text-bg;
+  @media screen and (min-width: $min-desktop) {
+  }
+}
+
+.contacts__overlay {
+  background-image: url(../images/contact-mobile.png);
+  background-position: center;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/contact-mobile@2x.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: $min-mobile) {
+    background-image: url(../images/contact-tablet.png);
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/contact-tablet@2x.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: $min-tablet) {
+    background-image: url(../images/contact-tablet.png);
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/contact-tablet@2x.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  @media screen and (min-width: $min-desktop) {
+    background-image: url(../images/contact-desctop.png);
+    background-size: cover;
+    background-position: center;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/contact-desctop@2x.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.contacts__container {
+  @media screen and (max-width: 767px) {
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+}
+
+.contacts {
+  &__title {
+    @include font(800, 14px, 19px, 0.03em);
+    margin: auto;
+    width: 100%;
+    min-width: 280px;
+    max-width: 440px;
+    text-align: center;
+    color: $white-text;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $min-tablet) {
+      @include font(800, 26px, 33.8px, 0.03em);
+      max-width: 688px;
+    }
+
+    @media screen and (min-width: $min-desktop) {
+      @include font(800, 46px, 59.8px, 0.03em);
+      max-width: 1090px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title--orange {
+    color: $orange-text;
+  }
+
+  &__text {
+    padding: 0 20px;
+    text-align: center;
+    max-width: 440px;
+    min-width: 280px;
+    @include font(600, 12px, 15px, 0.08em);
+    margin: auto;
+    margin-bottom: 30px;
+    color: $white-text;
+
+    @media screen and (min-width: $min-tablet) {
+      width: 452px;
+      max-width: 452px;
+      @include font(600, 14px, 17px, 0.08em);
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $min-desktop) {
+      width: 100%;
+      max-width: 1090px;
+      @include font(600, 30px, 37px, 0.08em);
+      margin-bottom: 56px;
+      padding: 0 70px;
+    }
+  }
+
+  &__text--orange {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+
+    color: $orange-text;
+
+    @media screen and (min-width: $min-tablet) {
+      font-size: 14px;
+      line-height: 1.214;
+    }
+
+    @media screen and (min-width: $min-desktop) {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+}
+.contacts-form {
+  &__item:not(:first-child) {
+    margin-top: 30px;
+
+    @media screen and (min-width: $min-desktop) {
+      margin-top: 30px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.214;
+    margin: 0 auto 30px;
+    height: 48px;
+    width: 280px;
+
+    color: $white-text;
+
+    @media screen and (min-width: $min-tablet) {
+      height: 48px;
+      width: 390px;
+    }
+
+    @media screen and (min-width: $min-desktop) {
+      height: 70px;
+      width: 478px;
+    }
+  }
+
+  &__label:last-child {
+    margin-bottom: 50px;
+    @media screen and (min-width: $min-tablet) {
+      margin-bottom: 31px;
+    }
+    @media screen and (min-width: $min-desktop) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__input {
+    margin: 0px;
+    padding: 15px 28px 16px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.214;
+
+    color: $white-text;
+    @media screen and (min-width: $min-desktop) {
+      padding: 23px 40px;
+    }
+    &::placeholder {
+      @include font(600, 14px, 17.07px, 0.08em);
+      color: $white-text;
+      @media screen and (min-width: $min-desktop) {
+        @include font(600, 20px, 24.38px, 0.08em);
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    padding: 14px 1px;
+    background-color: $orange-text;
+    width: 260px;
+    @include font(700, 12px, 15px, 0);
+    text-transform: uppercase;
+    color: $white-text;
+
+    @media screen and (min-width: $min-tablet) {
+    }
+
+    @media screen and (min-width: $min-desktop) {
+      width: 354px;
+      padding: 27px 23px;
+      @include font(700, 14px, 17px, 0.14em);
+    }
+  }
+}
